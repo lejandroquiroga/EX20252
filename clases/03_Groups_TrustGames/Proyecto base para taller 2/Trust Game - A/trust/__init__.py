@@ -8,9 +8,7 @@ App para el juego de Trust
 
 class C(BaseConstants):
     NAME_IN_URL = 'trust'
-
-    PLAYERS_PER_GROUP = 2
-
+    
     NUM_ROUNDS = 1
     ENDOWMENT = cu(10000)
     MULTIPLIER = 3
@@ -53,14 +51,12 @@ class Instrucciones(Page):
 
 
 class Enviar(Page):
-    form_model = "group"
+    form_model = ""
     form_fields = ["dinero_enviado"]
     
     @staticmethod
     def is_displayed(player: Player):
-        return player.id_in_group == 1
-
-    
+        return 
 
 
 class EsperaJ1(WaitPage):
